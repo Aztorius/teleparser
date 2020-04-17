@@ -630,7 +630,7 @@ class tdb():
                 row.extra.update(action_dict)
                 row.content = action
             else:
-                row.content = msg.message_content.strip('"\'')
+                row.content = msg.message_content.strip('"\'').replace("\n", " ")
 
             if msg.blob_reply:
                 replied_msg = msg
